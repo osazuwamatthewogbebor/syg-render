@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-da3ok%6ov_v!i1$(dfwn2++-79&83r!7u_)&a#^)wlyb^h_wj#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://syg-render.onrender.com"]
 
 
 # Application definition
@@ -77,13 +77,6 @@ WSGI_APPLICATION = 'multimedia_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 DATABASES = {
     'default': dj_database_url.config(default=config('DATABASE_URL'))
